@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Luxury Interior Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0b',
+                        card: '#141416',
+                        primary: '#c19d60',
+                        light: '#f7f4ec', // Off-white/beige feel
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-light text-gray-900 dark:bg-dark dark:text-gray-100 transition-colors duration-300 antialiased font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 left-0 z-50 p-8 flex justify-between items-start pointer-events-none" id="navbar">
+        <div class="flex items-center gap-4 pointer-events-auto text-black dark:text-white">
+            <a href="#home" class="p-2 -ml-2 rounded-full hover:opacity-60 transition cursor-pointer" data-cursor="hover" aria-label="Back to top">
+                <svg width="30" height="34" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Heptagon Border -->
+                    <path d="M 20 3 L 35 11 L 39 27 L 28 41 L 12 41 L 1 27 L 5 11 Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                    <!-- Inner Logo: Rectangle -->
+                    <rect x="11" y="14" width="18" height="5" fill="currentColor"/>
+                    <!-- Inner Logo: Triangle -->
+                    <path d="M 20 21 L 29 31 L 11 31 Z" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <!-- Keep theme toggle for functionality, but blend it in -->
+            <button id="theme-toggle" class="p-2 rounded-full hover:opacity-60 transition cursor-pointer" data-cursor="hover">
+                <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+            </button>
+        </div>
+        
+        <div class="hidden md:flex space-x-10 items-center text-[13px] font-bold tracking-widest uppercase pointer-events-auto text-black dark:text-white">
+            <a href="#projects" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">Work</a>
+            <a href="#about" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">About</a>
+            <a href="#contact" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-light dark:bg-[#111111] text-black dark:text-white overflow-hidden">
+        
+        <!-- Central 3D Graphic (Three.js) -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20" id="three-canvas-container">
+            <!-- Canvas injected via JS -->
+        </div>
+
+        <div class="relative z-10 w-full px-6 flex flex-col items-center justify-center pointer-events-none mt-12">
+            <!-- Massive Text -->
+            <h1 class="text-[12vw] md:text-[10.5vw] font-black uppercase leading-[0.85] tracking-tighter text-center m-0">
+                INTERIOR<br/>
+                DESIGN<br/>
+                EXPERIENCE
+            </h1>
+        </div>
+
+        <!-- Corner Elements -->
+        <div class="absolute bottom-8 right-8 text-[11px] font-bold tracking-widest uppercase text-gray-500">
+            SCROLL TO EXPLORE
+        </div>
+    </section>
+
+    <!-- About Statement Section -->
+    <section id="about-statement" class="bg-light dark:bg-[#111111] -mt-px relative overflow-hidden">
+        <!-- Top Border -->
+        <div class="w-full border-t border-gray-300 dark:border-white/10"></div>
+        
+        <div class="max-w-[1600px] mx-auto px-6 py-16 md:py-24 relative">
+            
+            <!-- Top Labels (Always horizontal, perfectly baseline aligned) -->
+            <div class="flex items-baseline gap-8 md:gap-24 mb-12 md:mb-20">
+                <div class="md:w-16 flex-shrink-0">
+                    <span class="text-[#48b0a9] font-bold text-[11px] tracking-widest uppercase">01</span>
+                </div>
+                <div>
+                    <h4 class="text-[11px] font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">ABOUT</h4>
+                </div>
+            </div>
+            
+            <!-- Massive Text (Indented on desktop to align with 'ABOUT') -->
+            <div class="md:ml-[8rem] lg:ml-[10rem]">
+                <h2 class="text-5xl md:text-[5.5rem] lg:text-[7rem] leading-[0.88] tracking-[-0.05em] font-black text-gray-900 dark:text-white max-w-[70rem]">
+                    NexStudio blends artistry with cutting-edge innovation.<br>
+                    We shape the web's future through each project we build.
+                </h2>
+            </div>
+        </div>
+        
+        <!-- Bottom padding placeholder since border/arrow were removed -->
+        <div class="w-full mt-8 md:mt-16"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-light dark:bg-card -mt-px">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Our Expertise</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Comprehensive design solutions tailored to your unique lifestyle and aesthetic preferences.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 border border-gray-200 dark:border-white/10 rounded-2xl hover:-translate-y-2 transition duration-300 bg-white dark:bg-dark">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <i data-lucide="layout-template" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Interior Architecture</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Strategic space planning and structural adjustments to maximize flow, light, and functionality.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-8 border border-gray-200 dark:border-white/10 rounded-2xl hover:-translate-y-2 transition duration-300 bg-white dark:bg-dark">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <i data-lucide="sofa" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bespoke Furnishing</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Curated selection of premium furniture, custom millwork, and unique decor pieces.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="p-8 border border-gray-200 dark:border-white/10 rounded-2xl hover:-translate-y-2 transition duration-300 bg-white dark:bg-dark">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <i data-lucide="lightbulb" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lighting & Atmosphere</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Architectural lighting design to enhance mood, highlight features, and improve ambiance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Slider Section -->
+    <section class="py-24 overflow-hidden relative -mt-px">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Vision to Reality</h2>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Slide to compare the raw space with our finished interior transformation.</p>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden cursor-ew-resize select-none" id="ba-slider">
+                <!-- After Image (Background) -->
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600" alt="Finished Interior" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+                
+                <!-- Before Image (Clipped) -->
+                <div class="absolute inset-0 w-1/2 h-full overflow-hidden" id="ba-before-clip">
+                    <!-- Assuming a grayscale or raw looking version for 'before' effect as placeholder -->
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600" alt="Raw Space" class="absolute inset-0 w-[200%] h-full object-cover max-w-none grayscale pointer-events-none filter sepia-[.3] contrast-75 brightness-90">
+                </div>
+                
+                <!-- Slider Handle -->
+                <div class="absolute inset-y-0 left-1/2 w-1 bg-white cursor-ew-resize shadow-[0_0_10px_rgba(0,0,0,0.5)] transform -translate-x-1/2 flex items-center justify-center" id="ba-handle">
+                    <div class="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-900 border-2 border-primary/20">
+                        <i data-lucide="code" class="w-5 h-5 rotate-90"></i>
+                    </div>
+                </div>
+                
+                <!-- Labels -->
+                <div class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded backdrop-blur-sm text-sm uppercase tracking-wider font-medium pointer-events-none">Before</div>
+                <div class="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded backdrop-blur-sm text-sm uppercase tracking-wider font-medium pointer-events-none">After</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section id="projects" class="py-24 bg-light dark:bg-card -mt-px">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Selected Works</h2>
+                    <p class="text-gray-600 dark:text-gray-400">A curation of our finest residential and commercial spaces.</p>
+                </div>
+                
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-full border border-gray-900 dark:border-white text-sm hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="residential">Residential</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="hospitality">Hospitality</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+                <!-- Project Items injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-24 border-t border-gray-200 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Our Process</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">From conceptualization to the final reveal, we ensure a seamless journey.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-200 dark:bg-white/10 -z-10"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative text-center">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
+                        <span class="text-2xl font-serif font-bold text-primary">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Discovery</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Understanding your vision, lifestyle, and project requirements.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative text-center">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
+                        <span class="text-2xl font-serif font-bold text-primary">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Concept Design</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Developing mood boards, spatial layouts, and initial 3D visualizations.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative text-center">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
+                        <span class="text-2xl font-serif font-bold text-primary">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Refinement</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Selecting exact materials, furnishings, and finalizing technical drawings.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative text-center">
+                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
+                        <span class="text-2xl font-serif font-bold text-primary">04</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Execution</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Managing contractors and overseeing the installation to the finest detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000" alt="Texture" class="w-full h-full object-cover mix-blend-overlay">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold mb-6">Ready to transform your space?</h2>
+                    <p class="text-gray-400 text-lg mb-10">Let's discuss your project. Fill out the form, and our lead designer will get back to you within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Studio Location</h4>
+                                <p class="text-gray-400">124 Luxury Avenue, Design District<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="mail" class="w-6 h-6 text-primary mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Email Us</h4>
+                                <p class="text-gray-400">hello@nexusinteriors.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="phone" class="w-6 h-6 text-primary mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Call Us</h4>
+                                <p class="text-gray-400">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">First Name</label>
+                                <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Last Name</label>
+                                <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email Address</label>
+                            <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Project Type</label>
+                            <select class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white appearance-none">
+                                <option class="text-black">Residential Renovation</option>
+                                <option class="text-black">New Build</option>
+                                <option class="text-black">Commercial Office</option>
+                                <option class="text-black">Hospitality</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-opacity-90 transition">
+                            Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-2xl font-serif font-bold tracking-wider text-white">NEXUS<span class="text-primary">.</span></a>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-primary transition">Instagram</a>
+                <a href="#" class="hover:text-primary transition">Pinterest</a>
+                <a href="#" class="hover:text-primary transition">LinkedIn</a>
+            </div>
+            <div class="mt-4 md:mt-0">
+                &copy; 2026 Nexus Interiors. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal (Hidden by default) -->
+    <div id="project-modal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-card w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl relative shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+            <button id="close-modal" class="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-primary transition z-10 backdrop-blur-sm">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            
+            <div id="modal-image-container" class="w-full h-[40vh] md:h-[50vh] relative">
+                <img id="modal-image" src="" alt="Project Image" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="p-8 md:p-12">
+                <div class="flex flex-wrap gap-2 mb-4" id="modal-tags">
+                    <!-- Tags injected here -->
+                </div>
+                <h2 id="modal-title" class="text-3xl md:text-5xl font-serif font-bold mb-6">Project Title</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="md:col-span-2">
+                        <h4 class="text-lg font-bold mb-3 border-b border-gray-200 dark:border-white/10 pb-2">The Brief</h4>
+                        <p id="modal-desc" class="text-gray-600 dark:text-gray-400 leading-relaxed"></p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-3 border-b border-gray-200 dark:border-white/10 pb-2">Details</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span class="text-gray-500">Location</span> <span id="modal-location" class="font-medium"></span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">Year</span> <span id="modal-year" class="font-medium"></span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">Size</span> <span id="modal-size" class="font-medium"></span></li>
+                            <li class="flex justify-between"><span class="text-gray-500">Services</span> <span id="modal-services" class="font-medium"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-[150%] transition-transform duration-300 z-50 flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+        <span>Message sent successfully!</span>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <svg class="cursor-arrow" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21 L 4.5 4.5 L 12 8 L 19.5 4.5 Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <div class="cursor-text absolute inset-0 flex items-center justify-center text-[10px] font-bold tracking-widest text-white opacity-0 transition-opacity duration-300">
+            VIEW
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/environments/RoomEnvironment.js"></script>
+    <script>
+        // --- 3D Torus Graphic ---
+        const container = document.getElementById('three-canvas-container');
+        if (container) {
+            const scene = new THREE.Scene();
+            
+            // Adjust FOV for less distortion and premium feel
+            const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.z = 30;
+            
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            renderer.toneMappingExposure = 1.0;
+            // Extremely soft, premium shadow on the canvas
+            renderer.domElement.style.filter = 'drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.15))';
+            container.appendChild(renderer.domElement);
+            
+            // Generate custom HDR-style environment map for cinematic softbox lighting & chromatic reflections
+            const envCanvas = document.createElement('canvas');
+            envCanvas.width = 2048;
+            envCanvas.height = 1024;
+            const envCtx = envCanvas.getContext('2d');
+            
+            // Base warm/off-white studio environment (matches new beige background)
+            envCtx.fillStyle = '#f7f4ec';
+            envCtx.fillRect(0, 0, 2048, 1024);
+            
+            // Draw large white softbox lights
+            envCtx.fillStyle = '#ffffff';
+            envCtx.shadowColor = '#ffffff';
+            envCtx.shadowBlur = 100;
+            envCtx.fillRect(100, 200, 800, 300); // Main key softbox
+            envCtx.fillRect(1200, 600, 600, 200); // Fill softbox
+            
+            // Draw subtle colored reflections (blue/orange)
+            envCtx.fillStyle = '#0055ff';
+            envCtx.shadowColor = '#0055ff';
+            envCtx.shadowBlur = 150;
+            envCtx.fillRect(800, 100, 200, 400); // Electric blue rim reflection
+            
+            envCtx.fillStyle = '#ff5500';
+            envCtx.shadowColor = '#ff5500';
+            envCtx.fillRect(1600, 800, 300, 150); // Warm orange rim reflection
+            
+            // Draw dark contrasting panels to give the reflections depth and sharp black edges
+            envCtx.fillStyle = '#0a0a0a';
+            envCtx.shadowBlur = 0;
+            envCtx.fillRect(0, 0, 100, 1024);
+            envCtx.fillRect(1000, 0, 150, 1024);
+            envCtx.fillRect(1900, 0, 148, 1024);
+            
+            const envTexture = new THREE.CanvasTexture(envCanvas);
+            envTexture.mapping = THREE.EquirectangularReflectionMapping;
+            scene.environment = envTexture;
+            
+            // Premium Abstract 3D Sculpture Group
+            const sculptureGroup = new THREE.Group();
+            
+            // Material: "transparent glossy glass + liquid chrome"
+            const material = new THREE.MeshPhysicalMaterial({
+                color: 0xeeeeee,
+                metalness: 0.15, // Lowered metalness for softer reflections
+                roughness: 0.1, 
+                transmission: 0.9, 
+                ior: 1.6, 
+                thickness: 2.5, 
+                clearcoat: 0.8, // Slightly reduced clearcoat shine
+                clearcoatRoughness: 0.05,
+                envMapIntensity: 2.0, // Reduced reflection intensity
+                transparent: true,
+                opacity: 1
+            });
+            
+            // Single organic knot structure (scaled down)
+            const geo = new THREE.TorusKnotGeometry(2.6, 1.1, 256, 64);
+            const knot = new THREE.Mesh(geo, material);
+            sculptureGroup.add(knot);
+            
+            scene.add(sculptureGroup);
+            
+            // Cinematic Studio Lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+            
+            const keyLight = new THREE.DirectionalLight(0xffffff, 2.0); 
+            keyLight.position.set(10, 15, 10);
+            scene.add(keyLight);
+            
+            const fillLight = new THREE.DirectionalLight(0xe0eaff, 1.0); // Cool fill
+            fillLight.position.set(-10, -5, 10);
+            scene.add(fillLight);
+            
+            const backLight = new THREE.DirectionalLight(0xffffff, 1.5); 
+            backLight.position.set(0, 10, -15);
+            scene.add(backLight);
+            
+            // Smooth Interactions
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+            let scrollY = 0;
+            const windowHalfX = window.innerWidth / 2;
+            const windowHalfY = window.innerHeight / 2;
+
+            // Respect prefers-reduced-motion
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (!prefersReducedMotion) {
+                document.addEventListener('mousemove', (event) => {
+                    mouseX = (event.clientX - windowHalfX) * 0.001;
+                    mouseY = (event.clientY - windowHalfY) * 0.001;
+                });
+                
+                window.addEventListener('scroll', () => {
+                    scrollY = window.scrollY;
+                });
+            }
+            
+            const clock = new THREE.Clock();
+            
+            // Animation loop
+            const animate = function () {
+                requestAnimationFrame(animate);
+                
+                const time = clock.getElapsedTime();
+                
+                if (!prefersReducedMotion) {
+                    // Inertia lerping for mouse
+                    targetX += (mouseX - targetX) * 0.05;
+                    targetY += (mouseY - targetY) * 0.05;
+                    
+                    // Very slow, sophisticated continuous rotation (no spinning logo feel)
+                    sculptureGroup.rotation.y = time * 0.05;
+                    sculptureGroup.rotation.x = Math.sin(time * 0.1) * 0.1;
+                    
+                    // Mouse parallax & rotation
+                    sculptureGroup.rotation.y += targetX * 1.5;
+                    sculptureGroup.rotation.x += targetY * 1.5;
+                    sculptureGroup.position.x = targetX * 2.0;
+                    sculptureGroup.position.y = -targetY * 2.0;
+                    
+                    // Scroll parallax
+                    sculptureGroup.position.y += Math.sin(time * 0.5) * 0.2 - (scrollY * 0.003);
+                    sculptureGroup.rotation.z = -(scrollY * 0.001);
+                    
+                    // Subtle organic breathing on the main knot
+                    knot.rotation.z = Math.sin(time * 0.2) * 0.05;
+                }
+                
+                renderer.render(scene, camera);
+            };
+            
+            animate();
+            
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                
+                // Responsive scaling
+                if (window.innerWidth < 768) {
+                    sculptureGroup.scale.set(0.7, 0.7, 0.7);
+                } else {
+                    sculptureGroup.scale.set(1, 1, 1);
+                }
+                
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Initial responsive check
+            if (window.innerWidth < 768) {
+                sculptureGroup.scale.set(0.7, 0.7, 0.7);
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
