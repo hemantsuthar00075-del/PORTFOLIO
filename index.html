@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body class="bg-light text-gray-900 dark:bg-dark dark:text-gray-100 transition-colors duration-300 antialiased font-sans">
 
@@ -81,34 +84,34 @@
         </div>
     </section>
 
-    <!-- About Statement Section -->
-    <section id="about-statement" class="bg-light dark:bg-[#111111] -mt-px relative overflow-hidden">
-        <!-- Top Border -->
-        <div class="w-full border-t border-gray-300 dark:border-white/10"></div>
-        
-        <div class="max-w-[1600px] mx-auto px-6 py-16 md:py-24 relative">
+    <!-- About Statement Section (Scroll Reveal) -->
+    <section id="about-statement" class="bg-light dark:bg-[#111111] -mt-px relative h-[300vh]">
+        <!-- Sticky Wrapper -->
+        <div class="sticky top-0 h-screen w-full flex flex-col justify-center overflow-hidden pt-12 md:pt-16">
+            <!-- Top Border -->
+            <div class="absolute top-0 w-full border-t border-gray-300 dark:border-white/10"></div>
             
-            <!-- Top Labels (Always horizontal, perfectly baseline aligned) -->
-            <div class="flex items-baseline gap-8 md:gap-24 mb-12 md:mb-20">
-                <div class="md:w-16 flex-shrink-0">
-                    <span class="text-[#48b0a9] font-bold text-[11px] tracking-widest uppercase">01</span>
+            <div class="max-w-[1400px] w-full mx-auto px-6 relative">
+                
+                <!-- Top Labels (Perfect baseline alignment) -->
+                <div class="flex items-baseline gap-4 md:gap-8 mb-10 md:mb-14">
+                    <div class="w-8 md:w-20 flex-shrink-0">
+                        <span class="text-[#48b0a9] font-bold text-sm tracking-widest uppercase">01</span>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">ABOUT</h4>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-[11px] font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">ABOUT</h4>
+                
+                <!-- Massive Text (Perfect horizontal alignment with 'ABOUT' label) -->
+                <!-- md: 5rem (w-20) + 2rem (gap-8) = 7rem -->
+                <div class="md:ml-[7rem]">
+                    <h2 id="scroll-text" class="text-4xl md:text-[4.5rem] lg:text-[5.5rem] leading-[1.1] tracking-[-0.04em] font-bold text-gray-900 dark:text-white max-w-[65rem]">
+                        I'm Hemant Suthar, an interior designer creating thoughtful spaces where functionality meets emotion.
+                    </h2>
                 </div>
-            </div>
-            
-            <!-- Massive Text (Indented on desktop to align with 'ABOUT') -->
-            <div class="md:ml-[8rem] lg:ml-[10rem]">
-                <h2 class="text-5xl md:text-[5.5rem] lg:text-[7rem] leading-[0.88] tracking-[-0.05em] font-black text-gray-900 dark:text-white max-w-[70rem]">
-                    NexStudio blends artistry with cutting-edge innovation.<br>
-                    We shape the web's future through each project we build.
-                </h2>
             </div>
         </div>
-        
-        <!-- Bottom padding placeholder since border/arrow were removed -->
-        <div class="w-full mt-8 md:mt-16"></div>
     </section>
 
     <!-- Services Section -->

@@ -57,6 +57,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Dark/Light Theme Toggle ---
     const themeToggle = document.getElementById('theme-toggle');
+    
+    // --- Scroll Reveal Text Animation ---
+    const scrollText = document.getElementById('scroll-text');
+    if (scrollText && typeof gsap !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+        
+        const text = scrollText.textContent.trim();
+        const words = text.split(/\s+/);
+        
+        scrollText.innerHTML = '';
+        words.forEach(word => {
+            const span = document.createElement('span');
+            span.innerHTML = word + '&nbsp;';
+            span.className = 'reveal-word inline-block';
+            span.style.opacity = '0.15';
+            scrollText.appendChild(span);
+        });
+        
+        const revealWords = scrollText.querySelectorAll('.reveal-word');
+        
+        gsap.to(revealWords, {
+            opacity: 1,
+            stagger: 0.1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#about-statement',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 0.2
+            }
+        });
+    }
     const htmlElement = document.documentElement;
     
     // Check local storage for preference, default to dark
