@@ -168,7 +168,6 @@ body {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-    .capability-col,
     .capability-item h3,
     .capability-item [data-lucide="arrow-up-right"],
     .capability-item img {
@@ -182,9 +181,6 @@ body {
 }
 
 /* Capability Section Focus and Border Transitions */
-.capability-col {
-    will-change: transform;
-}
 .capability-item,
 .capability-header {
     opacity: 1 !important;
