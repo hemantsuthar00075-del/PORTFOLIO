@@ -433,6 +433,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initProcessAnimation();
 
+    // --- Capabilities Section Scroll Wave Animation ---
+    const initCapabilitiesAnimation = () => {
+        const grid = document.getElementById('capabilities-grid');
+        if (!grid || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+        // Respect prefers-reduced-motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const cols = grid.querySelectorAll('.capability-col');
+        if (cols.length !== 3) return;
+
+        const mm = gsap.matchMedia();
+
+        // Desktop & Tablet (side-by-side columns): sequential wave left to right as user scrolls down, and vice versa
+        mm.add("(min-width: 768px)", () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: grid,
+                    start: 'top 85%',
+                    end: 'bottom 15%',
+                    scrub: 1.2
+                }
+            });
+
+            const liftAmount = -28;
+            const upDuration = 0.45;
+            const downDuration = 0.45;
+
+            // Card 1 (Left: Interior Architecture)
+            tl.to(cols[0], { y: liftAmount, duration: upDuration, ease: 'sine.out' }, 0)
+              .to(cols[0], { y: 0, duration: downDuration, ease: 'sine.in' }, upDuration);
+
+            // Card 2 (Center: Materials & Furnishings)
+            tl.to(cols[1], { y: liftAmount, duration: upDuration, ease: 'sine.out' }, 0.35)
+              .to(cols[1], { y: 0, duration: downDuration, ease: 'sine.in' }, 0.35 + upDuration);
+
+            // Card 3 (Right: Lighting & Atmosphere)
+            tl.to(cols[2], { y: liftAmount, duration: upDuration, ease: 'sine.out' }, 0.70)
+              .to(cols[2], { y: 0, duration: downDuration, ease: 'sine.in' }, 0.70 + upDuration);
+        });
+
+        // Mobile (stacked vertically): each card gently elevates when scrolling into view
+        mm.add("(max-width: 767px)", () => {
+            cols.forEach(col => {
+                gsap.timeline({
+                    scrollTrigger: {
+                        trigger: col,
+                        start: 'top 85%',
+                        end: 'bottom 20%',
+                        scrub: 1
+                    }
+                })
+                .to(col, { y: -20, duration: 0.5, ease: 'sine.out' })
+                .to(col, { y: 0, duration: 0.5, ease: 'sine.in' });
+            });
+        });
+    };
+
+    initCapabilitiesAnimation();
+
     const htmlElement = document.documentElement;
     
     // Check local storage for preference, default to dark
