@@ -221,27 +221,3 @@ body {
     border-color: #c19d60;
     box-shadow: 0 4px 22px -4px rgba(193, 157, 96, 0.35);
 }
-
-
-/* --- Neue World Inspired Stacked Cards Effect for Design Expertise --- */
-.stacked-card-shadow {
-    box-shadow: -22px 0 35px -8px rgba(0, 0, 0, 0.45);
-}
-.light .stacked-card-shadow,
-html:not(.dark) .stacked-card-shadow {
-    box-shadow: -15px 0 30px -5px rgba(0, 0, 0, 0.12);
-}
-
-.stacked-vertical-text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-}
-
-.mobile-stacked-card {
-    position: sticky;
-    box-shadow: 0 -12px 28px -6px rgba(0, 0, 0, 0.35);
-}
-.light .mobile-stacked-card,
-html:not(.dark) .mobile-stacked-card {
-    box-shadow: 0 -10px 24px -6px rgba(0, 0, 0, 0.08);
-}
