@@ -373,6 +373,115 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Design Expertise (Page 3) Horizontal Stacked Cards Scroll Animation ---
+    const initStackedCardsAnimation = () => {
+        const track = document.getElementById('services-desktop-track');
+        if (!track || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+        // Respect prefers-reduced-motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1024px)", () => {
+            const card2 = document.getElementById('stacked-card-02');
+            const card3 = document.getElementById('stacked-card-03');
+            const dim1 = document.getElementById('stacked-dim-01');
+            const dim2 = document.getElementById('stacked-dim-02');
+            const progressBar = document.getElementById('stacked-progress-bar');
+            const stepCounter = document.getElementById('stacked-step-counter');
+            const navPills = document.querySelectorAll('.stacked-nav-pill');
+            const tabs = document.querySelectorAll('.stacked-tab');
+
+            if (!card2 || !card3) return;
+
+            // Initial positions off to the right
+            gsap.set(card2, { xPercent: 110 });
+            gsap.set(card3, { xPercent: 110 });
+
+            const updateActiveState = (index) => {
+                navPills.forEach((pill, i) => {
+                    if (i === index) {
+                        pill.classList.remove('bg-black/5', 'dark:bg-white/5', 'text-gray-500', 'dark:text-gray-400');
+                        pill.classList.add('bg-primary', 'text-white');
+                    } else {
+                        pill.classList.add('bg-black/5', 'dark:bg-white/5', 'text-gray-500', 'dark:text-gray-400');
+                        pill.classList.remove('bg-primary', 'text-white');
+                    }
+                });
+                if (stepCounter) {
+                    const stepNum = '0' + (index + 1);
+                    stepCounter.textContent = `${stepNum} / 03`;
+                }
+            };
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: track,
+                    start: "top top",
+                    end: "+=220%",
+                    pin: true,
+                    scrub: 0.8,
+                    anticipatePin: 1,
+                    onUpdate: (self) => {
+                        const p = self.progress;
+                        if (progressBar) {
+                            progressBar.style.width = (33.33 + p * 66.67) + '%';
+                        }
+                        if (p < 0.42) {
+                            updateActiveState(0);
+                        } else if (p < 0.84) {
+                            updateActiveState(1);
+                        } else {
+                            updateActiveState(2);
+                        }
+                    }
+                }
+            });
+
+            // Card 2 slides in over Card 1
+            tl.to(card2, { xPercent: 0, ease: "power2.inOut", duration: 1 }, 0)
+              .to(dim1, { opacity: 0.6, ease: "power1.inOut", duration: 0.6 }, 0.25)
+
+              // Card 3 slides in over Card 2
+              .to(card3, { xPercent: 0, ease: "power2.inOut", duration: 1 }, 1.15)
+              .to(dim2, { opacity: 0.6, ease: "power1.inOut", duration: 0.6 }, 1.4);
+
+            // Click on pill or tab to smooth-scroll directly to that card
+            const jumpToCard = (cardIdx) => {
+                const st = tl.scrollTrigger;
+                if (!st) return;
+                let targetScroll = st.start;
+                if (cardIdx === 1) targetScroll = st.start + (st.end - st.start) * 0.52;
+                else if (cardIdx === 2) targetScroll = st.start + (st.end - st.start) * 0.98;
+                window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+            };
+
+            navPills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    const idx = parseInt(pill.getAttribute('data-index') || '0', 10);
+                    jumpToCard(idx);
+                });
+            });
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const idx = parseInt(tab.getAttribute('data-jump') || '0', 10);
+                    jumpToCard(idx);
+                });
+            });
+
+            return () => {
+                tl.kill();
+            };
+        });
+    };
+
+    initStackedCardsAnimation();
+
     // --- Process Section Scroll Reveal Animation ---
     const initProcessAnimation = () => {
         const processSection = document.getElementById('process');
