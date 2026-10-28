@@ -823,11 +823,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Hide when mouse leaves window
-        document.body.addEventListener('mouseleave', () => {
+        document.addEventListener('mouseleave', () => {
             cursor.classList.add('hidden');
         });
-        document.body.addEventListener('mouseenter', () => {
+        document.addEventListener('mouseenter', () => {
             cursor.classList.remove('hidden');
+        });
+        window.addEventListener('mouseout', (e) => {
+            if (!e.relatedTarget && !e.toElement) {
+                cursor.classList.add('hidden');
+            }
         });
 
         // Click effects

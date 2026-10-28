@@ -82,7 +82,7 @@ body {
 
 /* Custom Cursor */
 @media (pointer: fine) {
-    body, a, button, [role="button"], input, select, textarea, .cursor-pointer {
+    *, *::before, *::after, html, body {
         cursor: none !important;
     }
     
@@ -154,6 +154,12 @@ body {
     }
 }
 
+
+@media (pointer: coarse), (hover: none) {
+    #custom-cursor, .custom-cursor {
+        display: none !important;
+    }
+}
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     *, ::before, ::after {
