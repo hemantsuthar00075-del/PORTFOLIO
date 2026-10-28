@@ -1,0 +1,11 @@
+# Raw Source Folders & Large Presentation PDFs
+4/
+LITTLE FOOTPRINTS/
+THE SECOND LIFE/
+VILLA DESIGN/
+*.pdf
+*.bak
+
+# OS generated files
+Thumbs.db
+.DS_Store

@@ -54,8 +54,8 @@
             </button>
         </div>
         
-        <div class="hidden md:flex space-x-10 items-center text-[13px] font-bold tracking-widest uppercase pointer-events-auto text-black dark:text-white">
-            <a href="#projects" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">Work</a>
+        <div class="flex space-x-6 sm:space-x-8 md:space-x-10 items-center text-[11px] sm:text-xs md:text-[13px] font-bold tracking-widest uppercase pointer-events-auto text-black dark:text-white">
+            <a href="#projects" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">Designs</a>
             <a href="#about" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">About</a>
             <a href="#contact" class="hover:opacity-60 transition cursor-pointer" data-cursor="hover">Contact</a>
         </div>
@@ -85,7 +85,7 @@
     </section>
 
     <!-- About Statement Section (Scroll Reveal) -->
-    <section id="about-statement" class="bg-light dark:bg-[#111111] -mt-px relative h-[300vh]">
+    <section id="about" class="bg-light dark:bg-[#111111] -mt-px relative h-[300vh]">
         <!-- Sticky Wrapper -->
         <div class="sticky top-0 h-screen w-full flex flex-col justify-center overflow-hidden pt-12 md:pt-16">
             <!-- Top Border -->
@@ -96,12 +96,15 @@
                 <!-- Top Labels (Perfect baseline alignment) -->
                 <div class="flex items-baseline gap-4 md:gap-8 mb-10 md:mb-14">
                     <div class="w-8 md:w-20 flex-shrink-0">
-                        <span class="text-[#48b0a9] font-bold text-sm tracking-widest uppercase">01</span>
+                        <span class="text-primary font-bold text-sm tracking-widest uppercase">01</span>
                     </div>
+
                     <div>
                         <h4 class="text-sm font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">ABOUT</h4>
                     </div>
+
                 </div>
+
                 
                 <!-- Massive Text (Perfect horizontal alignment with 'ABOUT' label) -->
                 <!-- md: 5rem (w-20) + 2rem (gap-8) = 7rem -->
@@ -110,156 +113,391 @@
                         I'm Hemant Suthar, an interior designer creating thoughtful spaces where functionality meets emotion.
                     </h2>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-light dark:bg-card -mt-px">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 text-center">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Our Expertise</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Comprehensive design solutions tailored to your unique lifestyle and aesthetic preferences.</p>
-            </div>
+    <!-- Capabilities Section (Page 3) -->
+    <section id="services" class="pt-16 md:pt-20 pb-24 md:pb-32 bg-light dark:bg-[#111111] border-t border-gray-300 dark:border-white/10 -mt-px relative overflow-hidden transition-colors duration-300">
+        <div class="max-w-[1400px] w-full mx-auto px-6 relative">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="p-8 border border-gray-200 dark:border-white/10 rounded-2xl hover:-translate-y-2 transition duration-300 bg-white dark:bg-dark">
-                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
-                        <i data-lucide="layout-template" class="w-7 h-7"></i>
+            <!-- Section Header -->
+            <div class="capability-header mb-16 md:mb-20">
+                <!-- Top Labels (Identical alignment to Page 2 About section on the left) -->
+                <div class="flex items-baseline gap-4 md:gap-8 mb-8 md:mb-12">
+                    <div class="w-8 md:w-20 flex-shrink-0">
+                        <span class="text-primary font-bold text-sm tracking-widest uppercase">02</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Interior Architecture</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Strategic space planning and structural adjustments to maximize flow, light, and functionality.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="p-8 border border-gray-200 dark:border-white/10 rounded-2xl hover:-translate-y-2 transition duration-300 bg-white dark:bg-dark">
-                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
-                        <i data-lucide="sofa" class="w-7 h-7"></i>
+
+                    <div>
+                        <h4 class="text-sm font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">CAPABILITIES</h4>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Bespoke Furnishing</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Curated selection of premium furniture, custom millwork, and unique decor pieces.</p>
+
                 </div>
-                <!-- Service 3 -->
-                <div class="p-8 border border-gray-200 dark:border-white/10 rounded-2xl hover:-translate-y-2 transition duration-300 bg-white dark:bg-dark">
-                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
-                        <i data-lucide="lightbulb" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Lighting & Atmosphere</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Architectural lighting design to enhance mood, highlight features, and improve ambiance.</p>
+
+
+                <!-- Centered Heading & Subtitle (As it was earlier) -->
+                <div class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight uppercase text-gray-900 dark:text-white mb-5">
+                        DESIGN EXPERTISE
+                    </h2>
+                    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-sans leading-relaxed max-w-2xl mx-auto">
+                        Spaces shaped by function, material and light.
+                    </p>
                 </div>
+
             </div>
+
+            <!-- Vertical 3-Card Grid (More compact sizing) -->
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 capability-list">
+                    
+                    <!-- Card 01: INTERIOR ARCHITECTURE -->
+                    <div class="capability-item group flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-gray-200/90 dark:border-primary/40 bg-white dark:bg-card hover:-translate-y-2 hover:border-gray-900/60 dark:hover:border-primary hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-black/50 transition-all duration-500 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-[#48b0a9]" tabindex="0" role="region" aria-label="Interior Architecture Capability" data-cursor="hover">
+                        <div>
+                            <!-- Top Row: Icon Badge -->
+                            <div class="mb-4">
+                                <div class="w-10 h-10 bg-primary/15 rounded-xl flex items-center justify-center text-primary border border-primary/20 group-hover:scale-105 transition-transform duration-300">
+                                    <i data-lucide="layout-template" class="w-5 h-5"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Architectural Image -->
+                            <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-black/5 dark:border-white/10 mb-5 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Interior Architecture spatial planning" class="w-full h-full object-cover filter grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                            </div>
+
+
+                            <!-- Title -->
+                            <h3 class="text-lg sm:text-xl font-sans font-bold tracking-[-0.02em] uppercase text-gray-900 dark:text-white mb-2 group-hover:translate-x-1 transition-transform duration-300">
+                                INTERIOR ARCHITECTURE
+                            </h3>
+
+                            <!-- Description -->
+                            <p class="text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                                Thoughtful spatial planning, circulation and functional layouts that make every area work beautifully.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Card 02: MATERIALS & FURNISHINGS -->
+                    <div class="capability-item group flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-gray-200/90 dark:border-primary/40 bg-white dark:bg-card hover:-translate-y-2 hover:border-gray-900/60 dark:hover:border-primary hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-black/50 transition-all duration-500 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-[#48b0a9]" tabindex="0" role="region" aria-label="Materials & Furnishings Capability" data-cursor="hover">
+                        <div>
+                            <!-- Top Row: Icon Badge -->
+                            <div class="mb-4">
+                                <div class="w-10 h-10 bg-primary/15 rounded-xl flex items-center justify-center text-primary border border-primary/20 group-hover:scale-105 transition-transform duration-300">
+                                    <i data-lucide="sofa" class="w-5 h-5"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Architectural Image -->
+                            <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-black/5 dark:border-white/10 mb-5 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Considered materials, furniture and textures" class="w-full h-full object-cover filter grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                            </div>
+
+
+                            <!-- Title -->
+                            <h3 class="text-lg sm:text-xl font-sans font-bold tracking-[-0.02em] uppercase text-gray-900 dark:text-white mb-2 group-hover:translate-x-1 transition-transform duration-300">
+                                MATERIALS &amp; FURNISHINGS
+                            </h3>
+
+                            <!-- Description -->
+                            <p class="text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                                A considered selection of finishes, textures, furniture and details that give each space its own identity.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Card 03: LIGHTING & ATMOSPHERE -->
+                    <div class="capability-item group flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-gray-200/90 dark:border-primary/40 bg-white dark:bg-card hover:-translate-y-2 hover:border-gray-900/60 dark:hover:border-primary hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-black/50 transition-all duration-500 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-[#48b0a9]" tabindex="0" role="region" aria-label="Lighting & Atmosphere Capability" data-cursor="hover">
+                        <div>
+                            <!-- Top Row: Icon Badge -->
+                            <div class="mb-4">
+                                <div class="w-10 h-10 bg-primary/15 rounded-xl flex items-center justify-center text-primary border border-primary/20 group-hover:scale-105 transition-transform duration-300">
+                                    <i data-lucide="lightbulb" class="w-5 h-5"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Architectural Image -->
+                            <div class="w-full aspect-[16/10] rounded-xl overflow-hidden border border-black/5 dark:border-white/10 mb-5 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" alt="Architectural lighting and atmosphere" class="w-full h-full object-cover filter grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy">
+                            </div>
+
+
+                            <!-- Title -->
+                            <h3 class="text-lg sm:text-xl font-sans font-bold tracking-[-0.02em] uppercase text-gray-900 dark:text-white mb-2 group-hover:translate-x-1 transition-transform duration-300">
+                                LIGHTING &amp; ATMOSPHERE
+                            </h3>
+
+                            <!-- Description -->
+                            <p class="text-[11px] sm:text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                                Layered lighting and thoughtful material choices that shape the mood, depth and experience of an interior.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
         </div>
     </section>
 
-    <!-- Before & After Slider Section -->
-    <section class="py-24 overflow-hidden relative -mt-px">
-        <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
-            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Vision to Reality</h2>
-            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Slide to compare the raw space with our finished interior transformation.</p>
-        </div>
-        
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="relative w-full aspect-video rounded-2xl overflow-hidden cursor-ew-resize select-none" id="ba-slider">
-                <!-- After Image (Background) -->
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600" alt="Finished Interior" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
-                
-                <!-- Before Image (Clipped) -->
-                <div class="absolute inset-0 w-1/2 h-full overflow-hidden" id="ba-before-clip">
-                    <!-- Assuming a grayscale or raw looking version for 'before' effect as placeholder -->
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1600" alt="Raw Space" class="absolute inset-0 w-[200%] h-full object-cover max-w-none grayscale pointer-events-none filter sepia-[.3] contrast-75 brightness-90">
-                </div>
-                
-                <!-- Slider Handle -->
-                <div class="absolute inset-y-0 left-1/2 w-1 bg-white cursor-ew-resize shadow-[0_0_10px_rgba(0,0,0,0.5)] transform -translate-x-1/2 flex items-center justify-center" id="ba-handle">
-                    <div class="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-900 border-2 border-primary/20">
-                        <i data-lucide="code" class="w-5 h-5 rotate-90"></i>
-                    </div>
-                </div>
-                
-                <!-- Labels -->
-                <div class="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded backdrop-blur-sm text-sm uppercase tracking-wider font-medium pointer-events-none">Before</div>
-                <div class="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded backdrop-blur-sm text-sm uppercase tracking-wider font-medium pointer-events-none">After</div>
-            </div>
-        </div>
-    </section>
 
     <!-- Portfolio Gallery -->
-    <section id="projects" class="py-24 bg-light dark:bg-card -mt-px">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Selected Works</h2>
-                    <p class="text-gray-600 dark:text-gray-400">A curation of our finest residential and commercial spaces.</p>
+    <section id="projects" class="pt-16 md:pt-20 pb-24 md:pb-32 bg-light dark:bg-card border-t border-gray-300 dark:border-white/10 -mt-px relative overflow-hidden transition-colors duration-300">
+        <div class="max-w-[1400px] w-full mx-auto px-6 relative">
+            <!-- Top Labels (Identical alignment to 01 ABOUT, 02 CAPABILITIES, and 04 PROCESS) -->
+            <div class="flex items-baseline gap-4 md:gap-8 mb-8 md:mb-12">
+                <div class="w-8 md:w-20 flex-shrink-0">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">03</span>
                 </div>
+
+                <div>
+                    <h4 class="text-sm font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">DESIGNS</h4>
+                </div>
+
+            </div>
+
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight uppercase text-gray-900 dark:text-white mb-5">
+                    SELECTED WORKS
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-sans leading-relaxed max-w-2xl mx-auto mb-8">
+                    A curated collection of academic studio projects and spatial explorations.
+                </p>
                 
                 <!-- Filters -->
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap justify-center gap-2">
                     <button class="filter-btn active px-4 py-2 rounded-full border border-gray-900 dark:border-white text-sm hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="adaptive-reuse">Adaptive Reuse</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="institutional">Institutional</button>
                     <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="residential">Residential</button>
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="commercial">Commercial</button>
-                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="hospitality">Hospitality</button>
+                    <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 text-sm hover:border-gray-900 dark:hover:border-white transition" data-filter="technical">Technical Resolution</button>
                 </div>
+
             </div>
 
             <!-- Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1240px] mx-auto" id="portfolio-grid">
                 <!-- Project Items injected via JS -->
             </div>
         </div>
     </section>
 
     <!-- Process -->
-    <section id="process" class="py-24 border-t border-gray-200 dark:border-white/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4">Our Process</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">From conceptualization to the final reveal, we ensure a seamless journey.</p>
+    <section id="process" class="pt-16 md:pt-20 pb-24 md:pb-32 bg-light dark:bg-[#111111] border-t border-gray-300 dark:border-white/10 -mt-px relative overflow-hidden transition-colors duration-300">
+        <div class="max-w-[1400px] w-full mx-auto px-6 relative">
+            <!-- Top Labels (Identical alignment to 01 ABOUT and 02 CAPABILITIES) -->
+            <div class="flex items-baseline gap-4 md:gap-8 mb-8 md:mb-12">
+                <div class="w-8 md:w-20 flex-shrink-0">
+                    <span class="text-primary font-bold text-sm tracking-widest uppercase">04</span>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold tracking-widest uppercase text-gray-800 dark:text-gray-300">PROCESS</h4>
+                </div>
+
+            </div>
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[#0f172a] dark:text-white mb-5">
+                    THE DESIGN PROCESS
+                </h2>
+                <p class="text-base sm:text-lg text-[#475569] dark:text-gray-400 font-sans leading-relaxed max-w-2xl mx-auto">
+                    From the first conversation to the final details, every space begins with a thoughtful process.
+                </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-200 dark:bg-white/10 -z-10"></div>
-                
-                <!-- Step 1 -->
-                <div class="relative text-center">
-                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
-                        <span class="text-2xl font-serif font-bold text-primary">01</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Discovery</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Understanding your vision, lifestyle, and project requirements.</p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="relative text-center">
-                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
-                        <span class="text-2xl font-serif font-bold text-primary">02</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Concept Design</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Developing mood boards, spatial layouts, and initial 3D visualizations.</p>
+            <!-- Desktop Horizontal Timeline (md and up) -->
+            <div class="hidden md:block relative">
+                <!-- Connecting Line Track & Gold Accent -->
+                <div class="absolute top-[38px] left-[12.5%] right-[12.5%] h-[1px] -translate-y-1/2 -z-0 pointer-events-none" aria-hidden="true">
+                    <!-- Base Warm-Gray Track -->
+                    <div class="w-full h-full bg-[#d6d0c4] dark:bg-white/15"></div>
+                    <!-- Restrained Gold Progress Line -->
+                    <div id="process-line-desktop" class="absolute top-0 left-0 w-full h-full bg-primary/75 origin-left"></div>
                 </div>
 
-                <!-- Step 3 -->
-                <div class="relative text-center">
-                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
-                        <span class="text-2xl font-serif font-bold text-primary">03</span>
+
+                <!-- 4 Evenly Spaced Stages -->
+                <div class="grid grid-cols-4 gap-8 lg:gap-12 relative z-10">
+                    <!-- Stage 01 -->
+                    <div class="process-step text-center group cursor-default">
+                        <div class="process-circle w-[76px] h-[76px] mx-auto rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center mb-7 relative z-10 shadow-sm transition-all duration-300">
+                            <span class="process-number text-xl font-serif font-semibold text-black dark:text-white">01</span>
+                        </div>
+
+                        <div class="process-content">
+                            <h3 class="text-base lg:text-lg font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-3">
+                                Discovery
+                            </h3>
+                            <p class="text-xs lg:text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed max-w-[260px] mx-auto">
+                                Understanding your vision, lifestyle, and spatial needs.
+                            </p>
+                        </div>
+
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Refinement</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Selecting exact materials, furnishings, and finalizing technical drawings.</p>
+
+
+                    <!-- Stage 02 -->
+                    <div class="process-step text-center group cursor-default">
+                        <div class="process-circle w-[76px] h-[76px] mx-auto rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center mb-7 relative z-10 shadow-sm transition-all duration-300">
+                            <span class="process-number text-xl font-serif font-semibold text-black dark:text-white">02</span>
+                        </div>
+
+                        <div class="process-content">
+                            <h3 class="text-base lg:text-lg font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-3">
+                                Concept Design
+                            </h3>
+                            <p class="text-xs lg:text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed max-w-[260px] mx-auto">
+                                Developing moodboards, layouts, and 3D visualizations.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stage 03 -->
+                    <div class="process-step text-center group cursor-default">
+                        <div class="process-circle w-[76px] h-[76px] mx-auto rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center mb-7 relative z-10 shadow-sm transition-all duration-300">
+                            <span class="process-number text-xl font-serif font-semibold text-black dark:text-white">03</span>
+                        </div>
+
+                        <div class="process-content">
+                            <h3 class="text-base lg:text-lg font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-3">
+                                Design Development
+                            </h3>
+                            <p class="text-xs lg:text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed max-w-[260px] mx-auto">
+                                Refining materials, furnishings, lighting, and details.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stage 04 -->
+                    <div class="process-step text-center group cursor-default">
+                        <div class="process-circle w-[76px] h-[76px] mx-auto rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center mb-7 relative z-10 shadow-sm transition-all duration-300">
+                            <span class="process-number text-xl font-serif font-semibold text-black dark:text-white">04</span>
+                        </div>
+
+                        <div class="process-content">
+                            <h3 class="text-base lg:text-lg font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-3">
+                                Execution
+                            </h3>
+                            <p class="text-xs lg:text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed max-w-[260px] mx-auto">
+                                Bringing the design to life with precision and care.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <!-- Step 4 -->
-                <div class="relative text-center">
-                    <div class="w-24 h-24 mx-auto bg-white dark:bg-dark border-4 border-gray-100 dark:border-card rounded-full flex items-center justify-center mb-6 shadow-xl relative z-10">
-                        <span class="text-2xl font-serif font-bold text-primary">04</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Execution</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Managing contractors and overseeing the installation to the finest detail.</p>
+            </div>
+
+            <!-- Mobile Vertical Timeline (< md) -->
+            <div class="md:hidden relative pl-20 space-y-12">
+                <!-- Connecting Vertical Line -->
+                <div class="absolute left-7 top-7 bottom-12 w-[1px] pointer-events-none" aria-hidden="true">
+                    <!-- Base Warm-Gray Track -->
+                    <div class="w-full h-full bg-[#d6d0c4] dark:bg-white/15"></div>
+                    <!-- Restrained Gold Progress Line -->
+                    <div id="process-line-mobile" class="absolute top-0 left-0 w-full h-full bg-primary/75 origin-top"></div>
                 </div>
+
+
+                <!-- Stage 01 -->
+                <div class="process-step relative group">
+                    <div class="process-circle absolute left-0 top-0 w-14 h-14 rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center shadow-sm z-10 transition-all duration-300">
+                        <span class="process-number text-base font-serif font-semibold text-black dark:text-white">01</span>
+                    </div>
+
+                    <div class="process-content pt-1">
+                        <h3 class="text-base font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-2">
+                            Discovery
+                        </h3>
+                        <p class="text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed">
+                            Understanding your vision, lifestyle, and spatial needs.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Stage 02 -->
+                <div class="process-step relative group">
+                    <div class="process-circle absolute left-0 top-0 w-14 h-14 rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center shadow-sm z-10 transition-all duration-300">
+                        <span class="process-number text-base font-serif font-semibold text-black dark:text-white">02</span>
+                    </div>
+
+                    <div class="process-content pt-1">
+                        <h3 class="text-base font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-2">
+                            Concept Design
+                        </h3>
+                        <p class="text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed">
+                            Developing moodboards, layouts, and 3D visualizations.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Stage 03 -->
+                <div class="process-step relative group">
+                    <div class="process-circle absolute left-0 top-0 w-14 h-14 rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center shadow-sm z-10 transition-all duration-300">
+                        <span class="process-number text-base font-serif font-semibold text-black dark:text-white">03</span>
+                    </div>
+
+                    <div class="process-content pt-1">
+                        <h3 class="text-base font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-2">
+                            Design Development
+                        </h3>
+                        <p class="text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed">
+                            Refining materials, furnishings, lighting, and details.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Stage 04 -->
+                <div class="process-step relative group">
+                    <div class="process-circle absolute left-0 top-0 w-14 h-14 rounded-full border border-[#0f172a]/15 dark:border-white/15 bg-[#f7f4ec] dark:bg-[#141416] flex items-center justify-center shadow-sm z-10 transition-all duration-300">
+                        <span class="process-number text-base font-serif font-semibold text-black dark:text-white">04</span>
+                    </div>
+
+                    <div class="process-content pt-1">
+                        <h3 class="text-base font-sans font-bold tracking-tight text-[#0f172a] dark:text-white mb-2">
+                            Execution
+                        </h3>
+                        <p class="text-sm text-[#475569] dark:text-gray-400 font-sans leading-relaxed">
+                            Bringing the design to life with precision and care.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+    <section id="contact" class="pt-16 md:pt-20 pb-24 bg-gray-900 text-white border-t border-gray-300 dark:border-white/10 -mt-px relative overflow-hidden">
         <div class="absolute inset-0 opacity-20">
             <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000" alt="Texture" class="w-full h-full object-cover mix-blend-overlay">
         </div>
@@ -275,25 +513,33 @@
                             <i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-lg">Studio Location</h4>
-                                <p class="text-gray-400">124 Luxury Avenue, Design District<br>New York, NY 10001</p>
+                                <p class="text-gray-400">Ahmedabad, Gujarat</p>
                             </div>
+
                         </div>
+
                         <div class="flex items-start gap-4">
                             <i data-lucide="mail" class="w-6 h-6 text-primary mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-lg">Email Us</h4>
-                                <p class="text-gray-400">hello@nexusinteriors.com</p>
+                                <p class="text-gray-400"><a href="mailto:hemantsutharstudio@gmail.com" class="hover:text-primary transition">hemantsutharstudio@gmail.com</a></p>
                             </div>
+
                         </div>
+
                         <div class="flex items-start gap-4">
                             <i data-lucide="phone" class="w-6 h-6 text-primary mt-1"></i>
                             <div>
                                 <h4 class="font-bold text-lg">Call Us</h4>
-                                <p class="text-gray-400">+1 (555) 123-4567</p>
+                                <p class="text-gray-400"><a href="tel:6054321122" class="hover:text-primary transition">6054321122</a></p>
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 
                 <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20">
                     <form id="contact-form" class="space-y-6">
@@ -302,15 +548,19 @@
                                 <label class="block text-sm font-medium mb-2">First Name</label>
                                 <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white">
                             </div>
+
                             <div>
                                 <label class="block text-sm font-medium mb-2">Last Name</label>
                                 <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white">
                             </div>
+
                         </div>
+
                         <div>
                             <label class="block text-sm font-medium mb-2">Email Address</label>
                             <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white">
                         </div>
+
                         <div>
                             <label class="block text-sm font-medium mb-2">Project Type</label>
                             <select class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white appearance-none">
@@ -320,32 +570,29 @@
                                 <option class="text-black">Hospitality</option>
                             </select>
                         </div>
+
                         <div>
                             <label class="block text-sm font-medium mb-2">Message</label>
                             <textarea rows="4" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition text-white resize-none"></textarea>
                         </div>
+
                         <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-opacity-90 transition">
                             Send Request
                         </button>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-950 py-12 text-gray-400 text-sm">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <a href="#" class="text-2xl font-serif font-bold tracking-wider text-white">NEXUS<span class="text-primary">.</span></a>
-            </div>
-            <div class="flex space-x-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-center items-center">
+            <div class="flex space-x-8">
                 <a href="#" class="hover:text-primary transition">Instagram</a>
                 <a href="#" class="hover:text-primary transition">Pinterest</a>
                 <a href="#" class="hover:text-primary transition">LinkedIn</a>
-            </div>
-            <div class="mt-4 md:mt-0">
-                &copy; 2026 Nexus Interiors. All rights reserved.
             </div>
         </div>
     </footer>
@@ -365,24 +612,67 @@
                 <div class="flex flex-wrap gap-2 mb-4" id="modal-tags">
                     <!-- Tags injected here -->
                 </div>
+
                 <h2 id="modal-title" class="text-3xl md:text-5xl font-serif font-bold mb-6">Project Title</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                    <div class="md:col-span-2">
-                        <h4 class="text-lg font-bold mb-3 border-b border-gray-200 dark:border-white/10 pb-2">The Brief</h4>
-                        <p id="modal-desc" class="text-gray-600 dark:text-gray-400 leading-relaxed"></p>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-6" id="modal-details-grid">
+                    <div class="lg:col-span-7" id="modal-desc-col">
+                        <h4 class="text-lg font-bold mb-3 border-b border-gray-200 dark:border-white/10 pb-2">Design Concept & Scope</h4>
+                        <p id="modal-desc" class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"></p>
                     </div>
-                    <div>
-                        <h4 class="text-lg font-bold mb-3 border-b border-gray-200 dark:border-white/10 pb-2">Details</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex justify-between"><span class="text-gray-500">Location</span> <span id="modal-location" class="font-medium"></span></li>
-                            <li class="flex justify-between"><span class="text-gray-500">Year</span> <span id="modal-year" class="font-medium"></span></li>
-                            <li class="flex justify-between"><span class="text-gray-500">Size</span> <span id="modal-size" class="font-medium"></span></li>
-                            <li class="flex justify-between"><span class="text-gray-500">Services</span> <span id="modal-services" class="font-medium"></span></li>
-                        </ul>
+
+                    <div class="lg:col-span-5" id="modal-project-details">
+                        <h4 class="text-lg font-bold mb-3 border-b border-gray-200 dark:border-white/10 pb-2">Project Details</h4>
+                        <div class="space-y-3 text-sm">
+                            <div class="grid grid-cols-[100px_1fr] items-start gap-3 border-b border-gray-100 dark:border-white/5 pb-2.5">
+                                <span class="text-gray-500 dark:text-gray-400 font-medium">Typology</span>
+                                <span id="modal-services" class="font-semibold text-gray-900 dark:text-white"></span>
+                            </div>
+                            <div class="grid grid-cols-[100px_1fr] items-start gap-3 border-b border-gray-100 dark:border-white/5 pb-2.5">
+                                <span class="text-gray-500 dark:text-gray-400 font-medium">Scale / Area</span>
+                                <span id="modal-size" class="font-semibold text-gray-900 dark:text-white"></span>
+                            </div>
+                            <div class="grid grid-cols-[100px_1fr] items-start gap-3 pb-2.5">
+                                <span class="text-gray-500 dark:text-gray-400 font-medium">Location</span>
+                                <span id="modal-location" class="font-semibold text-gray-900 dark:text-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Gallery Section -->
+                <div id="modal-gallery-section" class="mt-6 pt-6 border-t border-gray-200 dark:border-white/10 hidden">
+                    <h4 id="modal-gallery-heading" class="text-lg font-bold font-sans mb-6 text-gray-900 dark:text-white">Spatial Exploration & Design Renders</h4>
+
+                    <div id="modal-gallery">
+                        <!-- Injected via JS -->
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Lightbox Modal -->
+    <div id="image-lightbox" class="fixed inset-0 z-[200] bg-black/95 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center p-4 sm:p-8 select-none">
+        <!-- Close button -->
+        <button id="close-lightbox" class="absolute top-5 right-5 z-30 bg-white/10 hover:bg-white/25 text-white p-3 rounded-full backdrop-blur-md transition-all duration-200 cursor-pointer shadow-lg hover:scale-105" aria-label="Close zoomed view">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Previous button -->
+        <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/25 text-white p-3.5 rounded-full backdrop-blur-md transition-all duration-200 cursor-pointer shadow-lg hover:scale-105 hidden sm:flex items-center justify-center" aria-label="Previous image">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Next button -->
+        <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/25 text-white p-3.5 rounded-full backdrop-blur-md transition-all duration-200 cursor-pointer shadow-lg hover:scale-105 hidden sm:flex items-center justify-center" aria-label="Next image">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Zoomed Image Container -->
+        <div class="relative max-w-full max-h-full flex flex-col items-center justify-center transform scale-95 transition-transform duration-300" id="lightbox-content">
+            <img id="lightbox-img" src="" alt="Zoomed render" class="max-w-[95vw] max-h-[85vh] object-contain rounded-xl shadow-2xl transition-all duration-200 cursor-pointer">
+            <div id="lightbox-counter" class="mt-3 text-white/70 text-xs tracking-widest uppercase bg-white/10 px-3.5 py-1 rounded-full backdrop-blur-sm"></div>
         </div>
     </div>
 
